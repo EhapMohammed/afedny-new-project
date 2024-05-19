@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- fontawsome -->
+    <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-fba26eda6a3fd6b4d0ce0def1e2ba1d7.css?vsn=d"
+  >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
+    >
+    <!-- googlefont -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand mx-0" href="#"><img src="./assets/images/logo.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">الأقسام</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">المنتدي</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">من نحن</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">سجل معنا كمدرس</a>
+              </li>
+            </ul>
+            <div class="left-sec">
+            <div class="nav-icons d-flex mx-3">
+                <div class="parent-notification mx-3">
+                    <span class="badge badge-warning" id="lblCartCount">
+                        0
+                    </span>
+                    <i class="fa-light fa-heart"></i>
+                </div>
+
+                <div class="parent-notification">
+                    <span class="badge badge-warning" id="lblCartCount">
+                        0
+                    </span>
+                    <i class="fa-light fa-cart-shopping"></i>
+                </div>
+
+                <div class="dropdown lang d-flex align-items-center justify-content-center">
+                    <div class="mx-3 lang-drp" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-globe"></i> <span class="mx-1">EN</span>
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="sec" onclick="setDirection('ar')">
+                            <p>AR</p>
+                        </div>
+                        <div class="sec" onclick="setDirection('en')">
+                            <p>EN</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+           <div class="nav-btns">
+<button class="login-btn"> تسجيل دخول </button>
+<button class="create-btn"> إنشاء حساب </button>
+           </div>
+        </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- content -->
+
+      <div class="content blog-sec">
+
+        <div class="user-header py-5">
+            <div class="container d-flex align-items-start justify-content-between flex-column">
+              <div class="head-tit">
+                <h6 class="mb-0"> المنتدي الإلكتروني </h6>
+                <div class="head-links"> <span> الرئيسية <i class="fa-regular fa-angle-left"></i></span> <span class="active">
+                    المنتدي الإلكتروني  </span> </div>
+              </div>
+            </div>
+          </div>
+
+<div class="container my-5">
+    <div class="row row-blog">      
+        <div class="col-lg-8">
+            <div class="card card-cart card-blog">
+                <img src="./assets/images/imageBlog.png" class="card-img-top p-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> تطورات الذكاء الإصطناعي </h5>
+                  <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال. إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها . </p>
+                 <a class="read-more" href=""> مشاهدة المزيد </a>
+                </div>
+              </div>
+
+              <div class="card card-cart card-blog">
+                <img src="./assets/images/imageBlog.png" class="card-img-top p-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> تطورات الذكاء الإصطناعي </h5>
+                  <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال. إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها . </p>
+                 <a class="read-more" href=""> مشاهدة المزيد </a>
+                </div>
+              </div>
+
+              <div class="card card-cart card-blog">
+                <img src="./assets/images/imageBlog.png" class="card-img-top p-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> تطورات الذكاء الإصطناعي </h5>
+                  <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال. إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها . </p>
+                 <a class="read-more" href=""> مشاهدة المزيد </a>
+                </div>
+              </div>
+
+              <div class="card card-cart card-blog">
+                <img src="./assets/images/imageBlog.png" class="card-img-top p-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> تطورات الذكاء الإصطناعي </h5>
+                  <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال. إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها . </p>
+                 <a class="read-more" href=""> مشاهدة المزيد </a>
+                </div>
+              </div>
+
+              <div class="card card-cart card-blog">
+                <img src="./assets/images/imageBlog.png" class="card-img-top p-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> تطورات الذكاء الإصطناعي </h5>
+                  <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال. إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها . </p>
+                 <a class="read-more" href=""> مشاهدة المزيد </a>
+                </div>
+              </div>
+
+            <div class="row g-4">
+                  <div class="d-flex align-items-center justify-content-center mt-5">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                  </div>
+              </div>
+        </div>
+
+        <div class="col-lg-4">
+<div class="search-blog">
+<h6> بحث </h6>
+<hr/>
+<div class="d-flex flex-column form-input">
+    <i class="fa-regular fa-magnifying-glass"></i>
+    <input type="text" name="" placeholder="ابحث عن ..." />
+</div>
+</div>
+<div class="recent-blog">
+    <h6> أحدث المقالات </h6>
+    <hr/>
+    <div class="card card-cart card-blog">
+        <img src="./assets/images/recentBlog.png" class="card-img-top p-1" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> تطورات الذكاء الإصطناعي </h5>
+          <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية </p>
+         <p class="blog-date"> 7 فبراير 2024 </p>
+        </div>
+        
+      </div>
+
+      <div class="card card-cart card-blog">
+        <img src="./assets/images/recentBlog.png" class="card-img-top p-1" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> تطورات الذكاء الإصطناعي </h5>
+          <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية </p>
+         <p class="blog-date"> 7 فبراير 2024 </p>
+        </div>
+        
+      </div>
+
+      <div class="card card-cart card-blog">
+        <img src="./assets/images/recentBlog.png" class="card-img-top p-1" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> تطورات الذكاء الإصطناعي </h5>
+          <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية </p>
+         <p class="blog-date"> 7 فبراير 2024 </p>
+        </div>
+        
+      </div>
+</div>
+        </div>
+        </div>
+</div>
+
+<div class="testimonials-sec my-5 py-5">
+    <div class="container">
+<div class="num-sec no-bord-ltr">
+    <img src="./assets/images/courses.png" alt="">
+    <p> عدد الكورسات </p>
+    <h6> +500 </h6>
+</div>
+<div class="num-sec">
+    <img src="./assets/images/visitors.png" alt="">
+    <p> عدد الزوار (شهرياً) </p>
+    <h6> +3M </h6>
+</div>
+<div class="num-sec">
+    <img src="./assets/images/clients.png" alt="">
+    <p> عدد العملاء </p>
+    <h6> +3K </h6>
+</div>
+<div class="num-sec">
+    <img src="./assets/images/employee.png" alt="">
+    <p> عدد الموظفين </p>
+    <h6> +100 </h6>
+</div>
+<div class="num-sec no-bord">
+    <img src="./assets/images/teacher.png" alt="">
+    <p> عدد المدرسين </p>
+    <h6> +2K </h6>
+</div>
+    </div>
+
+</div>
+
+<div class="depart-sec container my-5">
+    <div class="w-80">
+        <h5> <span></span> شركاؤنا </h5>
+        <p> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص 
+            اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+        </div>
+        <div class="d-grid my-5 py-5">
+            <div class="d-flex align-items-center justify-content-center">
+<img src="./assets/images/dep1.png" alt="">
+</div>
+<div class="d-flex align-items-center justify-content-center">
+<img src="./assets/images/dep2.png" alt="">
+</div>
+
+<div class="d-flex align-items-center justify-content-center">
+<img src="./assets/images/dep3.png" alt="">
+</div>
+
+<div class="d-flex align-items-center justify-content-center">
+<img src="./assets/images/dep2.png" alt=""> 
+</div>
+
+   </div>
+</div>
+
+<div class="mail-menu container my-5">
+    <div class="w-50">
+<p> القائمة البريدية </p>
+<h6> أدخل عنوان بريدك الالكتروني <br/> ليصلك كل جديد </h6>
+<div class="d-flex align-items-center">
+    <input type="mail" placeholder="أدخل عنوان بريدك الالكتروني">
+    <button> اشترك </button>
+</div>
+</div>
+</div>
+
+      </div>
+
+      <!-- footer -->
+<div class="footer-parent">
+   
+<div class="footer1">
+    <div class="container">
+<div class="row">
+    <div class="col-lg-4">
+        <img class="mb-3" src="./assets/images/logo.png" alt="logo">
+        
+        <p class="ms-5"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال . </p>
+<div class="social">
+    <a href=""> <i class="fa-brands fa-facebook-f"></i></a>
+   <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="">  <i class="fa-brands fa-twitter"></i></a>
+</div>
+    </div>
+
+    <div class="col-lg-3">
+<h5> أكثر المقالات قراءة </h5>
+<div>
+    <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> مراجعة نهائية للغة العربية </h6>
+    <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> مراجعة ليلة الإمتحان للغة الإنجليزية </h6>
+    <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> كيف تذاكر بذكاء </h6>
+    <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> ملخص النحو للثانوية العامة </h6>
+</div>
+    </div>
+
+    <div class="col-lg-3">
+        <h5> أكثر الكورسات تسجيلاً </h5>
+        <div>
+            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> أساسيات اللغة العربية </h6>
+            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> أدوبى فوتوشوب من البداية للنهاية </h6>
+            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> إدارة العملاء </h6>
+            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> إعلانات الفيس بوك الممولة </h6>
+        </div>
+            </div>
+
+    <div class="col-lg-2">
+        <h5> تواصل معنا </h5>
+        <div>
+            <h6> <span class="ms-1"> <i class="fa-solid fa-phone-flip"></i> </span> 01022886619 </h6>
+            <h6> <span class="ms-1"> <i class="fa-solid fa-envelope"></i> </span> Afedny.platform@gmail.com</h6>
+            <h6> <span class="ms-1"> <i class="fa-solid fa-location-dot"></i> </span> Cairo, Egypt</h6>
+        </div>
+    </div>
+
+</div>
+    </div>
+</div>
+<div class="footer2">
+    <div class="container d-flex align-items-center justify-content-between">
+    <h6> جميع الحقوق محفوظة <span> <img src="./assets/images/Vector.png" alt=""> </span> منصة أفدني 2023</h6>
+    <div class="d-flex align-items-center justify-content-between">
+            <a class="ms-5" href="#">سياسة الخصوصية</a>
+            <a class="" href="#">الشروط والأحكام</a>
+    </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
+<script>
+    function setDirection(lang) {
+        const htmlElement = document.querySelector('html');
+        if (lang === 'ar') {
+            htmlElement.setAttribute('dir', 'rtl');
+        } else {
+            htmlElement.setAttribute('dir', 'ltr');
+        }
+    }
+</script>

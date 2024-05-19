@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- fontawsome -->
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-fba26eda6a3fd6b4d0ce0def1e2ba1d7.css?vsn=d">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
+  <!-- googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand mx-0" href="#"><img src="./assets/images/logo.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">الأقسام</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">المنتدي</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">من نحن</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">سجل معنا كمدرس</a>
+          </li>
+        </ul>
+        <div class="left-sec">
+          <div class="nav-icons d-flex mx-3">
+            <div class="parent-notification mx-3">
+              <span class="badge badge-warning" id="lblCartCount">
+                0
+              </span>
+              <i class="fa-light fa-heart"></i>
+            </div>
+
+            <div class="parent-notification">
+              <span class="badge badge-warning" id="lblCartCount">
+                0
+              </span>
+              <i class="fa-light fa-cart-shopping"></i>
+            </div>
+
+            <div class="dropdown lang d-flex align-items-center justify-content-center">
+              <div class="mx-3 lang-drp" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-globe"></i> <span class="mx-1">EN</span>
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="sec" onclick="setDirection('ar')">
+                  <p>AR</p>
+                </div>
+                <div class="sec" onclick="setDirection('en')">
+                  <p>EN</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="nav-btns">
+            <button class="login-btn"> تسجيل دخول </button>
+            <button class="create-btn"> إنشاء حساب </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- content -->
+
+  <div class="content">
+    <div class="user-header">
+      <div class="container d-flex align-items-start justify-content-between flex-column">
+        <div class="imgBx d-flex align-items-center">
+          <div>
+            <h6 class="mb-0">الرسائل</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-3 p-md-5 ">
+      <div class="chat-container rounded">
+        <div class="chat-side-menu d-md-block d-none">
+          <div class="side-header ">
+            <div class="top-side">
+              <h5 class="m-3 fw-semibold">الرسائل</h5>
+            
+              <!-- <div class="messages-actions">
+                <div class="dropdown-center d-flex justify-content-center">
+                  <div class=" dropdown-toggle position-relative" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa fa-cog"></i>
+                  </div>
+                  <ul class="dropdown-menu position-absolute" style="inset: unset; width: 15rem;">
+                    <li><span class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#addGroup"
+                        aria-controls="addGroup" style="color:#212529;">
+  
+                        اضافة مجموعة
+                      </span>
+                    </li>
+  
+                    <li><span class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#client_chat"
+                        aria-controls="client_chat" style="color:#212529;">
+  
+                        محادثة مع عميل
+                      </span>
+                    </li>
+  
+                    <li><span class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#employee_chat"
+                        aria-controls="employee_chat" style="color:#212529;">
+  
+                        محادثة مع موظف
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+  
+              </div> -->
+              <!-- <i id="close_users_list" class="fas fa-times fs-5 mx-2 d-block d-md-none"></i> -->
+              
+            </div>
+              
+              <div class="seargh-message position-relative w-75 mb-3 mx-auto">
+                <svg class=" position-absolute me-2" style="top:25%" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1886_882)">
+                  <path d="M14.477 4.55146C14.7654 4.26279 15.2334 4.26279 15.5218 4.55146C16.5928 5.6224 17.1191 7.11428 16.9662 8.64482C16.928 9.02611 16.6068 9.31033 16.2317 9.31033C16.207 9.31033 16.1822 9.30908 16.1575 9.30662C15.7514 9.266 15.4551 8.90365 15.4957 8.49775C15.6046 7.41006 15.2331 6.35244 14.477 5.59627C14.1883 5.30787 14.1883 4.83986 14.477 4.55146Z" fill="#999999"/>
+                  <path d="M11.5517 0C16.2101 0 20 3.78988 20 8.44828C20 13.1067 16.2101 16.8966 11.5517 16.8966C6.89332 16.8966 3.10344 13.1067 3.10344 8.44828C3.10344 3.78988 6.89336 0 11.5517 0ZM11.5517 15.4187C15.3953 15.4187 18.5221 12.2919 18.5221 8.44828C18.5221 4.60469 15.3953 1.47785 11.5517 1.47785C7.70836 1.47785 4.58129 4.60469 4.58129 8.44828C4.58129 12.2919 7.70813 15.4187 11.5517 15.4187Z" fill="#999999"/>
+                  <path d="M0.216816 18.7388L5.58631 13.3693C5.87498 13.0807 6.34248 13.0807 6.63115 13.3693C6.91982 13.6578 6.91982 14.1257 6.63115 14.4142L1.26166 19.7836C1.11732 19.928 0.928417 20.0001 0.739238 20.0001C0.550058 20.0001 0.361152 19.928 0.216816 19.7836C-0.0718169 19.4952 -0.0718169 19.0272 0.216816 18.7388Z" fill="#999999"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_1886_882">
+                  <rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                  <input class="form-control pe-5 " type="text" placeholder="بحث ...">
+              </div>
+          
+          </div>
+          <!-- users list -->
+          <ul class="users-list">
+            <li class="user-container get_user_messages" data-chat="15" id="li-chat-15">
+              <div class="position-relative">
+
+                <img src="assets/images/support-icon.png" alt="">
+              </div>
+              <div class="user-name w-100" id="user-chat-15">
+                <div class="d-flex justify-content-between gap-1" data-chat="15">
+                  <p>الدعم الفني</p>
+                  <span id="last-time-15">10:54 PM</span>
+                </div>
+                <p id="last-message-15">hay</p>
+              </div>
+            </li>
+            <li class="user-container get_user_messages" data-chat="18" id="li-chat-18">
+              <div class="position-relative">
+
+                <img src="assets/images/support-icon.png" alt="">
+              </div>
+              <div class="user-name w-100" id="user-chat-18">
+                <div class="d-flex justify-content-between gap-1" data-chat="18">
+                  <p>
+                    namewrefwefwefw
+                  </p>
+                  <span id="last-time-18">8:56 PM</span>
+                </div>
+                <p id="last-message-18"></p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+        <div id="append_messages" class="d-md-block d-block">
+          <div class="chat-body">
+            <div class="body-header">
+              <div class="user-container">
+                <i id="user_list_icon" class="fas fa-bars mx-1 fs-5 d-block d-md-none"></i>
+                <div class="position-relative">
+                  <i class="fas fa-circle online-icon"></i>
+                  <img src="assets/images/support-icon.png" alt="">
+                </div>
+                <div class="user-name">
+                  <p>الدعم الفني</p>
+                </div>
+              </div>
+              <div class="messages-search">
+
+
+                <!-- <div class="dropdown-center d-flex justify-content-center">
+                        <div class=" dropdown-toggle position-relative" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa fa-cog"></i>
+                        </div>
+                        <ul class="dropdown-menu position-absolute" style="inset: unset; width: 15rem;">
+                            <li><span class="dropdown-item editGroup" data-bs-toggle="offcanvas" data-bs-target="#editGroup" aria-controls="editGroup" data-id="7" data-name="الدعم الفني"
+                                    style="color:#212529;">
+                               
+                                    الاعضاء
+                                </span></li>
+                        </ul>
+                    </div> -->
+
+              </div>
+            </div>
+            <div class="messages-container" id="all_messages">
+
+              <div class="my-message">
+                <div class="ms-inner-container">
+                  <p class="ms-content">Hello</p>
+
+                  <span class="text-muted">February 24, 1:59 AM</span>
+                </div>
+
+              </div>
+              <div class="my-message">
+                <div class="ms-inner-container">
+                  <p class="ms-content">how are you</p>
+
+                  <span class="text-muted">February 24, 2:00 AM</span>
+                </div>
+
+              </div>
+              <div class="user-message">
+                <div class="ms-inner-container">
+                  <p class="ms-content">omar i am good</p>
+
+                  <span class="text-muted">February 24, 2:00 AM</span>
+                </div>
+
+              </div>
+              <div class="user-message">
+                <div class="ms-inner-container">
+                  <p class="ms-content">naser aim goos</p>
+
+                  <span class="text-muted">February 24, 2:00 AM</span>
+                </div>
+
+              </div>
+              <div class="user-message">
+                <div class="ms-inner-container">
+                  <p class="ms-content">gggg</p>
+
+                  <span class="text-muted">February 24, 2:07 AM</span>
+                </div>
+
+              </div>
+              <div class="my-message">
+                <div class="ms-inner-container">
+                  <p class="ms-content">hello</p>
+
+                  <span class="text-muted">February 26, 8:28 PM</span>
+                </div>
+
+              </div>
+              <div class="my-message">
+                <div class="ms-inner-container">
+                  <p class="ms-content">hay</p>
+
+                  <span class="text-muted">February 27, 10:54 PM</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="send-container">
+              <input class="form-control form-control-lg" type="text" name="" id="message"
+                placeholder="اكتب رسالتك هنا ..." spellcheck="false" data-ms-editor="true">
+              <button class="btn btn-primary" id="send_message">ارسال</button>
+            </div>
+          </div>
+          <script>
+            $('#user_list_icon').on('click', function () {
+              $('.chat-side-menu').removeClass('d-none').addClass('d-block');
+              $('#append_messages').addClass('d-none').removeClass('d-block');
+            }); 
+          </script>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <div class="footer-parent">
+
+    <div class="footer1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="mb-3" src="./assets/images/logo.png" alt="logo">
+
+            <p class="ms-5"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ،
+              ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في
+              الاتصال . </p>
+            <div class="social">
+              <a href=""> <i class="fa-brands fa-facebook-f"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <h5> أكثر المقالات قراءة </h5>
+            <div>
+              <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> مراجعة نهائية للغة العربية </h6>
+              <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> مراجعة ليلة الإمتحان للغة
+                الإنجليزية </h6>
+              <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> كيف تذاكر بذكاء </h6>
+              <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> ملخص النحو للثانوية العامة </h6>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <h5> أكثر الكورسات تسجيلاً </h5>
+            <div>
+              <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> أساسيات اللغة العربية </h6>
+              <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> أدوبى فوتوشوب من البداية للنهاية
+              </h6>
+              <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> إدارة العملاء </h6>
+              <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> إعلانات الفيس بوك الممولة </h6>
+            </div>
+          </div>
+
+          <div class="col-lg-2">
+            <h5> تواصل معنا </h5>
+            <div>
+              <h6> <span class="ms-1"> <i class="fa-solid fa-phone-flip"></i> </span> 01022886619 </h6>
+              <h6> <span class="ms-1"> <i class="fa-solid fa-envelope"></i> </span> Afedny.platform@gmail.com</h6>
+              <h6> <span class="ms-1"> <i class="fa-solid fa-location-dot"></i> </span> Cairo, Egypt</h6>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer2">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h6> جميع الحقوق محفوظة <span> <img src="./assets/images/Vector.png" alt=""> </span> منصة أفدني 2023</h6>
+        <div class="d-flex align-items-center justify-content-between">
+          <a class="ms-5" href="#">سياسة الخصوصية</a>
+          <a class="" href="#">الشروط والأحكام</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+  $('#route2').hide();
+  $('.user-info-route2').removeClass('active-class');
+  $('.user-info-route1').addClass("active-class");
+
+  $('.user-info-route1').click(function () {
+    $('#route1').show();
+    $('#route2').hide();
+    $('.user-info-route2').removeClass('active-class');
+    $('.user-info-route1').addClass("active-class");
+    $(document).ready(function () {
+
+    });
+  });
+
+  $('.user-info-route2').click(function () {
+    $('#route2').show();
+    $('#route1').hide();
+    $('.user-info-route1').removeClass('active-class');
+    $('.user-info-route2').addClass("active-class");
+    $(document).ready(function () {
+
+    });
+
+  });
+</script>
+
+<script>
+  function setDirection(lang) {
+    const htmlElement = document.querySelector('html');
+    if (lang === 'ar') {
+      htmlElement.setAttribute('dir', 'rtl');
+    } else {
+      htmlElement.setAttribute('dir', 'ltr');
+    }
+  }
+</script>

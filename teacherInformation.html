@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-fba26eda6a3fd6b4d0ce0def1e2ba1d7.css?vsn=d">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
+    <!-- googlefont -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Include Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+    <!-- form-select-custom Js -->
+    <script src="assets/js/form-select-custom.js"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand mx-0" href="#"><img src="./assets/images/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الأقسام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">المنتدي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">سجل معنا كمدرس</a>
+                    </li>
+                </ul>
+                <div class="left-sec">
+                    <div class="nav-icons d-flex mx-3">
+                        <div class="parent-notification mx-3">
+                            <span class="badge badge-warning" id="lblCartCount">
+                                0
+                            </span>
+                            <i class="fa-light fa-heart"></i>
+                        </div>
+
+                        <div class="parent-notification">
+                            <span class="badge badge-warning" id="lblCartCount">
+                                0
+                            </span>
+                            <i class="fa-light fa-cart-shopping"></i>
+                        </div>
+
+                        <div class="dropdown lang d-flex align-items-center justify-content-center">
+                            <div class="mx-3 lang-drp" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-globe"></i> <span class="mx-1">EN</span>
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="sec" onclick="setDirection('ar')">
+                                    <p>AR</p>
+                                </div>
+                                <div class="sec" onclick="setDirection('en')">
+                                    <p>EN</p>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-btns">
+                        <button class="login-btn"> تسجيل دخول </button>
+                        <button class="create-btn"> إنشاء حساب </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- content -->
+
+    <div class="content container d-flex align-items-center justify-content-center flex-column">
+        <div class="head-info">
+            <h3> مرحبا بك فى منصة أفدني للتعليم والتنمية </h3>
+            <p class="forget-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى
+                كامل ، ولكنها تعطي الحياة لنص
+                اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+        </div>
+        <div class="personal-sec login-sec">
+            <div class="card-body">
+                <h4> البيانات الشخصية </h4>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-input">
+                            <span>
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <label class="mb-2" for="firstName"> الإسم الأول </label>
+                            <input name="firstName" type="text" placeholder="الإسم الأول" value="" onChange="" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-input">
+                            <span>
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <label class="mb-2" for="lastName"> الإسم الأخير </label>
+                            <input name="lastName" type="text" placeholder="الإسم الأخير" value="" onChange="" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="form-input">
+                            <span>
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <label class="mb-2" for="email">البريد الإلكتروني</label>
+                            <input type="email" placeholder="البريد الالكتروني" value="" name="email" onChange="" />
+                        </div>
+                    </div>
+                    <div class="birthday-sec row">
+                        <label for="birthday"> تاريخ الميلاد </label>
+
+                        <div class="col-xl-4 my-2 d-flex flex-column">
+                            <select class="js-example-basic-single form-control" id="day" name="day">
+                            </select>
+                        </div>
+
+                        <div class="col-xl-4 my-2 d-flex flex-column">
+                            <select class="js-example-basic-single form-control" id="month" name="month">
+                            </select>
+                        </div>
+
+                        <div class="col-xl-4 my-2 d-flex flex-column">
+                            <select class="js-example-basic-single form-control" id="year" name="year">
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="personal-sec login-sec">
+            <div class="card-body">
+                <h4> بيانات الإتصال </h4>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-input">
+                            <span>
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </span>
+                            <label class="mb-2" for="whatsNumber"> رقم الواتساب </label>
+                            <input class="mb-1" name="whatsNumber" type="number" placeholder="رقم الواتساب (للتواصل)"
+                                value="" onChange="" />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="personal-sec login-sec">
+            <div class="card-body">
+                <h4 class="pb-1"> موقعك </h4>
+
+                <div class="row">
+                    <div class="col-xl-6 d-flex flex-column">
+                        <label class="mb-2" for="country"> الدولة </label>
+                        <select class="js-example-basic-single form-control">
+                            <option value="" disabled selected>الدولة</option>
+                            <option value="1">مصر</option>
+                            <option value="2">الاردن</option>
+                            <option value="3">الامارات</option>
+                            <option value="4">السعودية</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="personal-sec login-sec">
+            <div class="card-body">
+                <h4 class="pb-1"> البيانات الأكاديمية </h4>
+
+                <div class="row">
+                    <div class="col-xl-6 d-flex flex-column">
+                        <label class="mb-2" for="lesson"> مادة التخصص </label>
+                        <select class="js-example-basic-single form-control">
+                            <option value="" disabled selected> مادة التخصص </option>
+                            <option value="1"> اللغة العربية </option>
+                            <option value="2"> اللغة الانجليزية </option>
+                            <option value="3"> اللغة الفرنسية </option>
+                        </select>
+                    </div>
+
+                    <div class="col-xl-6 d-flex flex-column">
+                        <label class="mb-2" for="lesson"> ساعات العمل المتاحة </label>
+                        <select class="js-example-basic-single form-control">
+                            <option value="" disabled selected> ساعات العمل المتاحة </option>
+                            <option value="1"> دوام كامل </option>
+                            <option value="2"> دوام جزئي </option>
+                        </select>
+                    </div>
+                    
+                    <div class="Upload-file mt-4">
+                        <h6> السيرة الذاتية </h6>
+                        <p> الملفات المدعومة: .doc, .docx or pdf </p>
+                        <div class="upload-sec">
+                            <button> <span> <i class="fa-solid fa-upload"></i> </span> رفع السيرة الذاتية  </button>
+                            <input type="file" id="fileInput" accept=".pdf,.doc,.docx">  
+                        </div>                       
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="personal-btns d-flex align-items-center justify-content-end mt-3 mb-5">
+            <button class="skip-btn me-3"> تخطي </button>
+            <button class="save-btn me-3"> حفظ واستكمال </button>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer-parent">
+
+        <div class="footer1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="mb-3" src="./assets/images/logo.png" alt="logo">
+
+                        <p class="ms-5"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا
+                            بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص
+                            مخصصة كتبها متخصصون في الاتصال . </p>
+                        <div class="social">
+                            <a href=""> <i class="fa-brands fa-facebook-f"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h5> أكثر المقالات قراءة </h5>
+                        <div>
+                            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> مراجعة نهائية للغة
+                                العربية </h6>
+                            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> مراجعة ليلة
+                                الإمتحان للغة الإنجليزية </h6>
+                            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> كيف تذاكر بذكاء
+                            </h6>
+                            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> ملخص النحو للثانوية
+                                العامة </h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h5> أكثر الكورسات تسجيلاً </h5>
+                        <div>
+                            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> أساسيات اللغة
+                                العربية </h6>
+                            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> أدوبى فوتوشوب من
+                                البداية للنهاية </h6>
+                            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> إدارة العملاء </h6>
+                            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> إعلانات الفيس بوك
+                                الممولة </h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <h5> تواصل معنا </h5>
+                        <div>
+                            <h6> <span class="ms-1"> <i class="fa-solid fa-phone-flip"></i> </span> 01022886619 </h6>
+                            <h6> <span class="ms-1"> <i class="fa-solid fa-envelope"></i> </span>
+                                Afedny.platform@gmail.com</h6>
+                            <h6> <span class="ms-1"> <i class="fa-solid fa-location-dot"></i> </span> Cairo, Egypt</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="container d-flex align-items-center justify-content-between">
+                <h6> جميع الحقوق محفوظة <span> <img src="./assets/images/Vector.png" alt=""> </span> منصة أفدني 2023
+                </h6>
+                <div class="d-flex align-items-center justify-content-between">
+                    <a class="ms-5" href="#">سياسة الخصوصية</a>
+                    <a class="" href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    // Function to populate days in the select element
+    function populateDays() {
+        var daySelect = document.getElementById("day");
+        // Clear existing options
+        daySelect.innerHTML = "<option value='' disabled selected>اليوم</option>";
+        // Populate options
+        for (var i = 1; i <= 31; i++) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            daySelect.appendChild(option);
+        }
+    }
+
+    // Function to populate months in the select element
+    function populateMonths() {
+        var monthSelect = document.getElementById("month");
+        // Clear existing options
+        monthSelect.innerHTML = "<option value='' disabled selected>الشهر</option>";
+        // Populate options
+        var months = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+        for (var i = 0; i < months.length; i++) {
+            var option = document.createElement("option");
+            option.text = months[i];
+            option.value = i + 1; // Months are 1-indexed
+            monthSelect.appendChild(option);
+        }
+    }
+
+    // Function to populate years in the select element
+    function populateYears() {
+        var yearSelect = document.getElementById("year");
+        // Clear existing options
+        yearSelect.innerHTML = "<option value='' disabled selected>السنة</option>";
+        // Populate options
+        var currentYear = new Date().getFullYear();
+        for (var i = currentYear; i >= currentYear - 100; i--) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            yearSelect.appendChild(option);
+        }
+    }
+
+    // Call functions to populate select elements
+    populateDays();
+    populateMonths();
+    populateYears();
+</script>
+
+<script>
+    function setDirection(lang) {
+        const htmlElement = document.querySelector('html');
+        if (lang === 'ar') {
+            htmlElement.setAttribute('dir', 'rtl');
+        } else {
+            htmlElement.setAttribute('dir', 'ltr');
+        }
+    }
+</script>
+
+</body>

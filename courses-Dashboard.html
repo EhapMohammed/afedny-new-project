@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-fba26eda6a3fd6b4d0ce0def1e2ba1d7.css?vsn=d">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
+
+    <!-- googlefont -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <div class="content-grid">
+
+        <!-- sidebar -->
+
+        <div class="sidebar" id="sidebar">
+            <i class="fa-regular fa-xmark close-sidebar"></i>
+            <div class="d-flex justify-content-center align-items-center mt-4 mb-5"><img class="logo dashboard-logo"
+                    src="./assets/images/dashboard-logo.png" alt=""></div>
+
+            <div class="d-flex justify-content-start align-items-center my-2 sidebar-link">
+                <span class="sidebar-menu-icon"><i class="fa-solid fa-grid-2"></i></span>
+                <h6 class="mx-3 side-links"> لوحة التحكم </h6>
+            </div>
+          
+            <div class="d-flex justify-content-start align-items-center my-2 sidebar-link active-link">
+                <span class="sidebar-menu-icon"><i class="fa-solid fa-desktop"></i></span>
+                <h6 class="mx-3 side-links"> الكورسات </h6>
+            </div>
+
+            <div class="d-flex justify-content-start align-items-center my-2 sidebar-link ">
+                <span class="sidebar-menu-icon"><i class="fa-solid fa-user-graduate"></i></span>
+                <h6 class="mx-3 side-links"> الطلاب </h6>
+            </div>
+
+            <div class="d-flex justify-content-start align-items-center my-2 sidebar-link">
+                <span class="sidebar-menu-icon"><i class="fa-solid fa-gear"></i></span>
+                <h6 class="mx-3 side-links"> الإعدادات </h6>
+            </div>
+
+        </div>
+
+        <div class="parent-sec">
+            <!-- navbar -->
+
+            <nav class="navbar navbar-expand-lg navbar-light navbar-dashboard">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <div id="toggleButton">
+                            <i class="fa-duotone fa-bars"></i>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <div class="mob-logo"><div id="toggleButton-nav">
+                                <i class="fa-duotone fa-bars"></i>
+                            </div></div>
+                            <ul class="navbar-nav ml-auto">
+                                <div class="dropdown d-flex align-items-center justify-content-center">
+                                    <div class="parent-notification mx-2" id="dropdownMenuButton"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="badge badge-warning" id="lblCartCount">
+                                        </span>
+                                        <i class="fas fa-bell notification-icon"></i>
+                                    </div>
+                                    <div class="dropdown-menu dropdown-menu-end notification-sec"
+                                        data-bs-popper="static">
+                                        <div id="DZ_W_Notification1" class="widget-media dz-scroll p-2"
+                                            style="height:380px;">
+                                            <ul class="timeline">
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="timeline-panel">
+                                                        <div class="media mx-2">
+                                                            <img alt="image" width="50"
+                                                                src="./assets/images/user-logo.jpg">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1"> علي عبدالهادي أرسل لك صورة </h6>
+                                                            <small class="d-block date-notify"> 29 يوليو 2024 - 02:26
+                                                                مساءً </small>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <a class="all-notification" href=""> جميع الإشعارات </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="dropdown lang d-flex align-items-center justify-content-center">
+                                    <div class="mx-3" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <div class="sec" onclick="setDirection('ar')">
+                                            <p>AR</p>
+                                        </div>
+                                        <div class="sec" onclick="setDirection('en')">
+                                            <p>EN</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                    <div class="dropdown drp-user">
+                                        <button class="dropdown-toggle dropdown-user " type="button" id="dropdownMenuButton"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img class="topbarImg" src="./assets/images/user-logo.jpg" alt="" />
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                                            <div class="pro-head">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                                                    <div>
+                                                        <span> علي عبدالهادي </span>
+                                                        <p class="m-0"> aly.abdelhady@gmail.com </p>
+                                                    </div>                     
+                                                </div>
+                                                
+                                                <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                                    <i class="feather icon-log-out"></i>
+                                                </a>
+                                            </div>
+                                            <ul class="pro-body">
+                                                <li><a href="javascript:" class="dropdown-item"><i class="fa-regular fa-gear ms-2"></i> إعدادات الملف الشخصي </a></li>
+                                            </ul>
+                                            <ul class="pro-body no-border">
+                                                <li><a href="javascript:" class="dropdown-item"><i class="fa-sharp fa-regular fa-arrow-left-from-bracket ms-2"></i> تسجيل الخروج </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </nav>
+
+            <div class="container user-page">
+                <div class="my-4">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"> لوحة التحكم </a></li>
+                            <li class="breadcrumb-item active" aria-current="page"> الكورسات </li>
+                        </ol>
+                    </nav>
+
+                </div>
+
+                <div class="container parent-student mt-4">
+                    <div class="mb-4 mob-dir">
+                        <div class="d-flex align-items-center filt-dir">
+                           <div class="select-tab">
+                            <select class="js-example-basic-single form-control">
+                                <option value="" disabled selected> تصنيف حسب الأحدث </option>
+                                <option value="1"> من الاحدث للاقدم </option>
+                                <option value="2"> من الاقدم للاحدث </option>
+                            </select>
+                           </div>
+
+                           <div class="select-tab">
+                            <select class="js-example-basic-single form-control">
+                                <option value="" disabled selected> تصنيف حسب التقييم </option>
+                                <option value="1"> من الاعلي للاقل </option>
+                                <option value="2"> من الاقل للاعلي </option>
+                            </select>
+                           </div>
+    
+                            <div class="d-flex flex-column form-input">
+                                <i class="fa-regular fa-magnifying-glass"></i>
+                                <input type="text" name="" placeholder="ابحث عن ..." />
+                            </div>
+    
+                        </div>
+    
+                        <div class="d-flex align-items-center project-num">
+                            <p class="mb-0 fw-500"> 73 دورة تدريبية </p>
+                        </div>
+    
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-course">
+                            <thead>
+                                <tr>
+                                    <th scope="col">  <input class="form-check-input" type="checkbox" value="" id="selectAllCheckbox" > </th>
+                                    <th scope="col"> الصورة </th>
+                                    <th scope="col"> إسم الدورة التدريبية </th>
+                                    <th scope="col"> السعر </th>
+                                    <th scope="col"> عدد الطلاب المشتركين </th>
+                                    <th scope="col"> عدد التقييمات </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <input class="form-check-input checkall" type="checkbox" value="" id="flexCheckChecked" > </td>
+                                    <td>
+                                            <div class="imgBx"><img src="assets/images/user-logo.jpg" alt=""></div>
+                                    </td>
+                                    <td>  <div> مبادىء التصميم ونظرية الألوان </div>  </td>
+                                    <td> <div> 1500 ج.م </div> </td>
+                                    <td> <div> 2,123 </div> </td>
+                                    <td> 774 </td>
+                                </tr>
+                                <tr>
+                                    <td> <input class="form-check-input checkall" type="checkbox" value="" id="flexCheckChecked" > </td>
+                                    <td>
+                                            <div class="imgBx"><img src="assets/images/user-logo.jpg" alt=""></div>
+                                    </td>
+                                    <td>  <div> مبادىء التصميم ونظرية الألوان </div>  </td>
+                                    <td> <div> 1500 ج.م </div> </td>
+                                    <td> <div> 2,123 </div> </td>
+                                    <td> 774 </td>
+                                </tr>
+                                <tr>
+                                    <td> <input class="form-check-input checkall" type="checkbox" value="" id="flexCheckChecked" > </td>
+                                    <td>
+                                            <div class="imgBx"><img src="assets/images/user-logo.jpg" alt=""></div>
+                                    </td>
+                                    <td>  <div> مبادىء التصميم ونظرية الألوان </div>  </td>
+                                    <td> <div> 1500 ج.م </div> </td>
+                                    <td> <div> 2,123 </div> </td>
+                                    <td> 774 </td>
+                                </tr>
+                                <tr>
+                                    <td> <input class="form-check-input checkall" type="checkbox" value="" id="flexCheckChecked" > </td>
+                                    <td>
+                                            <div class="imgBx"><img src="assets/images/user-logo.jpg" alt=""></div>
+                                    </td>
+                                    <td>  <div> مبادىء التصميم ونظرية الألوان </div>  </td>
+                                    <td> <div> 1500 ج.م </div> </td>
+                                    <td> <div> 2,123 </div> </td>
+                                    <td> 774 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex align-items-center justify-content-between mt-2 pagen-parent">
+                            <div>
+                                <p class="pag-text"> عرض 1 إلى 10 من أصل 12 مدخلاً </p>
+                            </div>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                  <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                      <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                  </li>
+                                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </nav>
+                          </div>
+                    </div>
+            
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+    <!-- form-select-custom Js -->
+    <script src="assets/js/form-select-custom.js"></script>
+</body>
+
+</html>
+
+<script>
+    function setDirection(lang) {
+        const htmlElement = document.querySelector('html');
+        if (lang === 'ar') {
+            htmlElement.setAttribute('dir', 'rtl');
+        } else {
+            htmlElement.setAttribute('dir', 'ltr');
+        }
+    }
+</script>
+
+<script>
+    // Function to populate days in the select element
+    function populateDays() {
+        var daySelect = document.getElementById("day");
+        // Clear existing options
+        daySelect.innerHTML = "<option value='' disabled selected>اليوم</option>";
+        // Populate options
+        for (var i = 1; i <= 31; i++) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            daySelect.appendChild(option);
+        }
+    }
+
+    // Function to populate months in the select element
+    function populateMonths() {
+        var monthSelect = document.getElementById("month");
+        // Clear existing options
+        monthSelect.innerHTML = "<option value='' disabled selected>الشهر</option>";
+        // Populate options
+        var months = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+        for (var i = 0; i < months.length; i++) {
+            var option = document.createElement("option");
+            option.text = months[i];
+            option.value = i + 1; // Months are 1-indexed
+            monthSelect.appendChild(option);
+        }
+    }
+
+    // Function to populate years in the select element
+    function populateYears() {
+        var yearSelect = document.getElementById("year");
+        // Clear existing options
+        yearSelect.innerHTML = "<option value='' disabled selected>السنة</option>";
+        // Populate options
+        var currentYear = new Date().getFullYear();
+        for (var i = currentYear; i >= currentYear - 100; i--) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            yearSelect.appendChild(option);
+        }
+    }
+
+    // Call functions to populate select elements
+    populateDays();
+    populateMonths();
+    populateYears();
+</script>
+
+<script>
+    // JavaScript to toggle navigation menu on mobile
+    document.getElementById('toggleNavButton').addEventListener('click', function () {
+        var nav = document.querySelector('.pcoded-navbar');
+        nav.classList.toggle('show-nav');
+    });
+
+    // JavaScript to hide navigation menu when any nav-link is clicked
+    var navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function (navLink) {
+        navLink.addEventListener('click', function () {
+            var nav = document.querySelector('.pcoded-navbar');
+            nav.classList.remove('show-nav');
+        });
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.route-btn').forEach(function (button) {
+        button.addEventListener('click', function () {
+            // Remove 'active-route' class from all buttons
+            document.querySelectorAll('.route-btn').forEach(function (btn) {
+                btn.classList.remove('active-route');
+            });
+            // Add 'active-route' class to the clicked button
+            this.classList.add('active-route');
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the "select all" checkbox
+        const selectAllCheckbox = document.getElementById("selectAllCheckbox");
+
+        // Get all checkboxes in the table body
+        const checkboxes = document.querySelectorAll("tbody .checkall[type='checkbox']");
+
+        // Add event listener to the "select all" checkbox
+        selectAllCheckbox.addEventListener("change", function () {
+            checkboxes.forEach(function (checkbox) {
+                // Set the state of each checkbox to match the "select all" checkbox
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        });
+
+        // Add event listener to each checkbox in the table body
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener("change", function () {
+                // If any checkbox is unchecked, uncheck the "select all" checkbox
+                if (!this.checked) {
+                    selectAllCheckbox.checked = false;
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("toggleButton");
+        const content = document.querySelector(".content-grid");
+
+        toggleButton.addEventListener("click", function () {
+            content.classList.toggle("toggle-grid");
+        });
+    });
+</script>
+
+<script>
+    function hide() {
+        var element = document.getElementById("navbarNavAltMarkup");
+        element.classList.remove("show");
+    }
+
+    $(document).ready(function(){
+    $('.navbar-toggler').click(function(){
+        $('.navbar-collapse').toggleClass('show');
+    });
+});
+</script>
+
+<script>
+    function previewImage(event) {
+        var input = event.target;
+        var reader = new FileReader();
+        reader.onload = function(){
+            var dataURL = reader.result;
+            var img = document.getElementById('profile-image');
+            img.src = dataURL;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+
+    function deleteImage() {
+        document.getElementById('profile-image').src = 'assets/images/user-logo.jpg'; // Set default image path
+        document.getElementById('file-input').value = ''; // Clear the file input
+    }
+</script>
+
+
+<script>
+    function isMobileScreen() {
+        return window.innerWidth <= 991;
+    }
+
+    document.getElementById('toggleButton-nav').addEventListener('click', function () {
+        if (isMobileScreen()) {
+            let sidebar = document.getElementById('sidebar');
+            let computedStyle = window.getComputedStyle(sidebar);
+
+            if (computedStyle.display === "none") {
+                sidebar.style.display = "block";
+            } else {
+                sidebar.style.display = "none";
+            }
+        }
+    });
+
+    document.body.addEventListener('click', function (event) {
+        if (isMobileScreen()) {
+            let sidebar = document.getElementById('sidebar');
+            let toggleButton = document.getElementById('toggleButton-nav');
+
+            if (!sidebar.contains(event.target) && event.target !== toggleButton && !toggleButton.contains(event.target)) {
+                sidebar.style.display = "none";
+            }
+
+            if (event.target.classList.contains('side-links') || event.target.classList.contains('coll-links') || event.target.classList.contains('close-sidebar')) {
+                sidebar.style.display = "none";
+            }
+        }
+    });
+
+</script>

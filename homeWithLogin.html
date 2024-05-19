@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- fontawsome -->
+    <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-fba26eda6a3fd6b4d0ce0def1e2ba1d7.css?vsn=d"
+  >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
+    >
+    <!-- googlefont -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-home">
+        <div class="container">
+          <a class="navbar-brand mx-0" href="#"><img src="./assets/images/logo.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">الأقسام</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">المنتدي</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">من نحن</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">سجل معنا كمدرس</a>
+              </li>
+            </ul>
+            <div class="left-sec">
+            <div class="nav-icons d-flex mx-3">
+                <div class="parent-notification mx-3">
+                    <span class="badge badge-warning" id="lblCartCount">
+                        0
+                    </span>
+                    <i class="fa-light fa-heart"></i>
+                </div>
+
+                <div class="parent-notification">
+                    <span class="badge badge-warning" id="lblCartCount">
+                        0
+                    </span>
+                    <i class="fa-light fa-cart-shopping"></i>
+                </div>
+
+                <div class="dropdown lang d-flex align-items-center justify-content-center">
+                    <div class="mx-3 lang-drp" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-globe"></i> <span class="mx-1">EN</span>
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="sec" onclick="setDirection('ar')">
+                            <p>AR</p>
+                        </div>
+                        <div class="sec" onclick="setDirection('en')">
+                            <p>EN</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+                <div class="dropdown drp-user">
+                    <button class="dropdown-toggle dropdown-user " type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="topbarImg" src="./assets/images/user-logo.jpg" alt="" />
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right profile-notification">
+                        <div class="pro-head">
+                            <div class="d-flex align-items-center">
+                                <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                                <div>
+                                    <span> علي عبدالهادي </span>
+                                    <p class="m-0"> aly.abdelhady@gmail.com </p>
+                                </div>                     
+                            </div>
+                            
+                            <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                <i class="feather icon-log-out"></i>
+                            </a>
+                        </div>
+                        <ul class="pro-body">
+                            <li><a href="javascript:" class="dropdown-item"><i class="fa-sharp fa-regular fa-subtitles ms-2"></i> كورساتي </a></li>
+                        </ul>
+                        <ul class="pro-body">
+                            <li><a href="javascript:" class="dropdown-item"><i class="fa-regular fa-heart ms-2"></i> المفضلة </a></li>
+                        </ul>
+                        <ul class="pro-body">
+                            <li><a href="javascript:" class="dropdown-item"><i class="fa-regular fa-cart-shopping ms-2"></i> سلة التسوق </a></li>
+                        </ul>
+                        <ul class="pro-body">
+                            <li><a href="javascript:" class="dropdown-item"><i class="fa-regular fa-comment-dots ms-2"></i>  الرسائل </a></li>
+                        </ul>
+                        <ul class="pro-body">
+                            <li><a href="javascript:" class="dropdown-item"><i class="fa-regular fa-gear ms-2"></i> إعدادات الحساب </a></li>
+                        </ul>
+                        <ul class="pro-body no-border">
+                            <li><a href="javascript:" class="dropdown-item"><i class="fa-sharp fa-regular fa-arrow-left-from-bracket ms-2"></i> تسجيل الخروج </a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- content -->
+
+      <div class="content home-sec">
+<div class="afedny-sec">
+<div class="container">
+<h5> منصة أفدني للتعليم والتنمية </h5>
+<p> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في وضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+<div class="row py-5">
+    <div class="col-lg-6 d-flex">
+        <div class="sec1 flex-fill">
+<img src="./assets/images/Online.school.png" alt="">
+<h6> المدرسة الإفتراضية </h6>
+<p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال.</p>
+</div>
+    </div>
+    <div class="col-lg-6 d-flex">
+        <div class="sec2 flex-fill">
+        <img src="./assets/images/course.png" alt="">
+        <h6> أكاديمية أفدني للتدريب والإستشارات </h6>
+<p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال.</p>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="courses-sec container my-5">
+    <div class="d-flex align-items-center justify-content-between">
+        <div class="w-80">
+<h5> <span></span> تصفح أفضل الدورات </h5>
+<p> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص 
+    اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+</div>
+<button> مشاهدة الكل  <span class="me-1"> <i class="fa-solid fa-arrow-left"></i> </span></button>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-4 mb-5">
+    <div class="col-lg-3">
+        <div class="card h-100">
+                    <img src="./assets/images/image 20.png"  class="card-img-top p-1" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> دورة تعلم إدارة الشبكات</h5>
+            <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها لا تشكل جملًا بمعنى كامل </p>
+          <div class="d-flex align-items-center justify-content-between">
+            <p class="price"> 1500 جنيه  <span> 2000 جنيه </span></p>
+            <i class="fa-solid fa-cart-plus"></i>
+          </div>
+            
+          </div>
+        
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card h-100">
+                    <img src="./assets/images/image 20.png"  class="card-img-top p-1" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> دورة تعلم إدارة الشبكات</h5>
+            <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها لا تشكل جملًا بمعنى كامل </p>
+          <div class="d-flex align-items-center justify-content-between">
+            <p class="price"> 1500 جنيه  <span> 2000 جنيه </span></p>
+            <i class="fa-solid fa-cart-plus"></i>
+          </div>
+            
+          </div>
+        
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card h-100">
+          <img src="./assets/images/image 20.png"  class="card-img-top p-1" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> دورة تعلم إدارة الشبكات</h5>
+            <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها لا تشكل جملًا بمعنى كامل </p>
+          <div class="d-flex align-items-center justify-content-between">
+            <p class="price"> 1500 جنيه  <span> 2000 جنيه </span></p>
+            <i class="fa-solid fa-cart-plus"></i>
+          </div>
+            
+          </div>   
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card h-100">
+                    <img src="./assets/images/image 20.png"  class="card-img-top p-1" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> دورة تعلم إدارة الشبكات</h5>
+            <p class="card-text"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها لا تشكل جملًا بمعنى كامل </p>
+          <div class="d-flex align-items-center justify-content-between">
+            <p class="price"> 1500 جنيه  <span> 2000 جنيه </span></p>
+            <i class="fa-solid fa-cart-plus"></i>
+          </div>
+            
+          </div>
+        
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="why-afedny  my-5">
+    <div class="container">
+        <div class="w-80">
+            <h5> <span></span> لماذا منصة أفدني </h5>
+            <p> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص 
+                اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+<div class="sec">
+<img src="./assets/images/price.png" alt="">
+<h6> السعر </h6>
+<p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل </p>
+</div>
+                </div>
+
+                <div class="col-lg-3 my-5">
+                    <div class="sec">
+                    <img src="./assets/images/quality.png" alt="">
+                    <h6> إعتمادات الجودة </h6>
+                    <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل </p>
+                    </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="sec">
+                                        <img src="./assets/images/certificate.png" alt="">
+                                        <h6> شهادات </h6>
+                                        <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل </p>
+                                        </div>
+                                                        </div>
+                                                        <div class="col-lg-3 my-5">
+                                                            <div class="sec">
+                                                            <img src="./assets/images/follow.png" alt="">
+                                                            <h6> متابعة </h6>
+                                                            <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل </p>
+                                                            </div>
+                                                                            </div>
+            </div>
+    </div>
+
+</div>
+
+<div class="article-sec container my-5">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="w-80">
+    <h5> <span></span> تصفح أهم مقالات التعليم </h5>
+    <p> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص 
+        اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+    </div>
+    <button> مشاهدة الكل  <span class="me-1"> <i class="fa-solid fa-arrow-left"></i> </span></button>
+    </div>
+    <div class="row my-5">
+        <div class="col-lg-4 my-2">
+            <div class="d-flex align-items-center">
+<img src="./assets/images/image 21.png" alt="">
+<div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+        </div>
+
+        <div class="col-lg-4 my-2">
+            <div class="d-flex align-items-center">
+<img src="./assets/images/image 21.png" alt="">
+<div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+        </div>
+
+        <div class="col-lg-4 my-2">
+            <div class="d-flex align-items-center">
+<img src="./assets/images/image 21.png" alt="">
+<div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+        </div>
+
+        <div class="col-lg-4 my-2">
+            <div class="d-flex align-items-center">
+<img src="./assets/images/image 21.png" alt="">
+<div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+        </div>
+
+        <div class="col-lg-4 my-2">
+            <div class="d-flex align-items-center">
+<img src="./assets/images/image 21.png" alt="">
+<div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+        </div>
+
+        <div class="col-lg-4 my-2">
+            <div class="d-flex align-items-center">
+<img src="./assets/images/image 21.png" alt="">
+<div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+        </div>
+    
+      </div>
+</div>
+
+<div class="article-sec container my-5">
+    <div class="d-flex align-items-center justify-content-between">
+        <div class="w-80">
+<h5> <span></span> تصفح أهم مقالات التدريب </h5>
+<p> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص 
+    اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+</div>
+<button> مشاهدة الكل  <span class="me-1"> <i class="fa-solid fa-arrow-left"></i> </span></button>
+</div>
+<div class="row my-5">
+    <div class="col-lg-4 my-2">
+        <div class="d-flex align-items-center">
+<img src="./assets/images/Frame 42.png" alt="">
+<div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+    </div>
+
+    <div class="col-lg-4 my-2">
+        <div class="d-flex align-items-center">
+            <img src="./assets/images/Frame 42.png" alt="">
+            <div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+    </div>
+
+    <div class="col-lg-4 my-2">
+        <div class="d-flex align-items-center">
+            <img src="./assets/images/Frame 42.png" alt="">
+            <div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+    </div>
+
+    <div class="col-lg-4 my-2">
+        <div class="d-flex align-items-center">
+            <img src="./assets/images/Frame 42.png" alt="">
+            <div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+    </div>
+
+    <div class="col-lg-4 my-2">
+        <div class="d-flex align-items-center">
+            <img src="./assets/images/Frame 42.png" alt="">
+            <div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+    </div>
+
+    <div class="col-lg-4 my-2">
+        <div class="d-flex align-items-center">
+            <img src="./assets/images/Frame 42.png" alt="">
+            <div class="article-info">
+<h5> تطورات الذكاء الإصطناعي </h5>
+<h6> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى إنها سلسلة من الكلمات اللاتينية</h6>
+<p class="m-0"> 7 فبراير 2024 </p>
+</div>
+</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="testimonials-sec my-5 py-5">
+    <div class="container">
+<div class="num-sec">
+    <img src="./assets/images/courses.png" alt="">
+    <p> عدد الكورسات </p>
+    <h6> +500 </h6>
+</div>
+<div class="num-sec">
+    <img src="./assets/images/visitors.png" alt="">
+    <p> عدد الزوار (شهرياً) </p>
+    <h6> +3M </h6>
+</div>
+<div class="num-sec">
+    <img src="./assets/images/clients.png" alt="">
+    <p> عدد العملاء </p>
+    <h6> +3K </h6>
+</div>
+<div class="num-sec">
+    <img src="./assets/images/employee.png" alt="">
+    <p> عدد الموظفين </p>
+    <h6> +100 </h6>
+</div>
+<div class="num-sec no-bord">
+    <img src="./assets/images/teacher.png" alt="">
+    <p> عدد المدرسين </p>
+    <h6> +2K </h6>
+</div>
+    </div>
+
+</div>
+
+<div class="rate-sec container my-5">
+    <div class="w-80">
+        <h5> <span></span> تقييم العملاء </h5>
+        <p> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص 
+            اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row my-5 pb-5">
+                <div class="col-lg-4">
+               <div class="user-rate">
+                <div class="d-flex align-items-center my-2">
+                    <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                    <div class="user-name"> 
+                         <h6> علي عبدالهادي  </h6>
+                        <div class="ti-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star bad-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+              <div class="d-flex align-items-center justify-content-end mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                    </svg>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="user-rate">
+                 <div class="d-flex align-items-center my-2">
+                     <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                     <div class="user-name"> 
+                          <h6> علي عبدالهادي  </h6>
+                         <div class="ti-stars">
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star bad-star"></i>
+                         </div>
+                     </div>
+                 </div>
+                 <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+               <div class="d-flex align-items-center justify-content-end mt-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                     <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                     </svg>
+                 </div>
+             </div>
+             </div>
+             <div class="col-lg-4">
+                <div class="user-rate">
+                 <div class="d-flex align-items-center my-2">
+                     <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                     <div class="user-name"> 
+                          <h6> علي عبدالهادي  </h6>
+                         <div class="ti-stars">
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star"></i>
+                             <i class="fa-solid fa-star bad-star"></i>
+                         </div>
+                     </div>
+                 </div>
+                 <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+               <div class="d-flex align-items-center justify-content-end mt-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                     <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                     </svg>
+                 </div>
+             </div>
+             </div>
+            </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row my-5 pb-5">
+                    <div class="col-lg-4">
+                   <div class="user-rate">
+                    <div class="d-flex align-items-center my-2">
+                        <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                        <div class="user-name"> 
+                             <h6> علي عبدالهادي  </h6>
+                            <div class="ti-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star bad-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+                  <div class="d-flex align-items-center justify-content-end mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                        </svg>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="user-rate">
+                     <div class="d-flex align-items-center my-2">
+                         <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                         <div class="user-name"> 
+                              <h6> علي عبدالهادي  </h6>
+                             <div class="ti-stars">
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star bad-star"></i>
+                             </div>
+                         </div>
+                     </div>
+                     <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+                   <div class="d-flex align-items-center justify-content-end mt-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                         <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                         </svg>
+                     </div>
+                 </div>
+                 </div>
+                 <div class="col-lg-4">
+                    <div class="user-rate">
+                     <div class="d-flex align-items-center my-2">
+                         <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                         <div class="user-name"> 
+                              <h6> علي عبدالهادي  </h6>
+                             <div class="ti-stars">
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star bad-star"></i>
+                             </div>
+                         </div>
+                     </div>
+                     <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+                   <div class="d-flex align-items-center justify-content-end mt-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                         <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                         </svg>
+                     </div>
+                 </div>
+                 </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row my-5 pb-5">
+                    <div class="col-lg-4">
+                   <div class="user-rate">
+                    <div class="d-flex align-items-center my-2">
+                        <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                        <div class="user-name"> 
+                             <h6> علي عبدالهادي  </h6>
+                            <div class="ti-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star bad-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+                  <div class="d-flex align-items-center justify-content-end mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                        </svg>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="user-rate">
+                     <div class="d-flex align-items-center my-2">
+                         <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                         <div class="user-name"> 
+                              <h6> علي عبدالهادي  </h6>
+                             <div class="ti-stars">
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star bad-star"></i>
+                             </div>
+                         </div>
+                     </div>
+                     <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+                   <div class="d-flex align-items-center justify-content-end mt-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                         <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                         </svg>
+                     </div>
+                 </div>
+                 </div>
+                 <div class="col-lg-4">
+                    <div class="user-rate">
+                     <div class="d-flex align-items-center my-2">
+                         <div class="imgBx2"><img src="assets/images/user-logo.jpg" alt=""></div>
+                         <div class="user-name"> 
+                              <h6> علي عبدالهادي  </h6>
+                             <div class="ti-stars">
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star bad-star"></i>
+                             </div>
+                         </div>
+                     </div>
+                     <p class="m-0"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد .. </p>
+                   <div class="d-flex align-items-center justify-content-end mt-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                         <path d="M9.64174 5.62101C10.2419 5.36931 10.4936 4.65296 10.2226 4.07213L9.27389 2.07796C9.00283 1.51668 8.34456 1.2648 7.76373 1.51668C6.11805 2.21368 4.70471 3.12364 3.58177 4.22721C2.20715 5.5242 1.27782 7.01499 0.774437 8.66067C0.271053 10.3259 0 12.5909 0 15.4757V21.4195C0 22.0584 0.522745 22.5812 1.16166 22.5812H8.7705C9.40941 22.5812 9.93216 22.0584 9.93216 21.4195V13.8107C9.93216 13.1716 9.40941 12.649 8.7705 12.649H5.13065C5.16937 10.6934 5.63403 9.12533 6.48591 7.94412C7.1829 6.99583 8.22839 6.22139 9.64174 5.62101ZM23.3106 5.62101C23.9107 5.36931 24.1622 4.65296 23.8914 4.07213L22.9427 2.09751C22.6716 1.53604 22.0134 1.28435 21.4325 1.53604C19.8062 2.23304 18.4121 3.143 17.2699 4.22721C15.8951 5.54376 14.9466 7.03455 14.4431 8.68023C13.9397 10.3064 13.6882 12.5718 13.6882 15.4759V21.4197C13.6882 22.0586 14.2109 22.5814 14.8498 22.5814H22.4587C23.0976 22.5814 23.6203 22.0586 23.6203 21.4197V13.8109C23.6203 13.1718 23.0976 12.6492 22.4587 12.6492H18.7995C18.8382 10.6936 19.303 9.12553 20.1547 7.94432C20.8517 6.99583 21.8972 6.22139 23.3106 5.62101Z" fill="#0166FF"/>
+                         </svg>
+                     </div>
+                 </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+</div>
+
+<div class="depart-sec container my-5">
+    <div class="w-80">
+        <h5> <span></span> شركاؤنا </h5>
+        <p> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص 
+            اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال </p>
+        </div>
+        <div class="d-grid my-5 py-5">
+            <div class="d-flex align-items-center justify-content-center">
+<img src="./assets/images/dep1.png" alt="">
+</div>
+<div class="d-flex align-items-center justify-content-center">
+<img src="./assets/images/dep2.png" alt="">
+</div>
+
+<div class="d-flex align-items-center justify-content-center">
+<img src="./assets/images/dep3.png" alt="">
+</div>
+
+<div class="d-flex align-items-center justify-content-center">
+<img src="./assets/images/dep2.png" alt=""> 
+</div>
+
+   </div>
+</div>
+
+<div class="mail-menu container my-5">
+    <div class="w-50">
+<p> القائمة البريدية </p>
+<h6> أدخل عنوان بريدك الالكتروني <br/> ليصلك كل جديد </h6>
+<div class="d-flex align-items-center">
+    <input type="mail" placeholder="أدخل عنوان بريدك الالكتروني">
+    <button> اشترك </button>
+</div>
+</div>
+</div>
+
+      </div>
+
+      <!-- footer -->
+<div class="footer-parent">
+   
+<div class="footer1">
+    <div class="container">
+<div class="row">
+    <div class="col-lg-4">
+        <img class="mb-3" src="./assets/images/logo.png" alt="logo">
+        
+        <p class="ms-5"> إنها سلسلة من الكلمات اللاتينية التي ، عند وضعها في موضعها ، لا تشكل جملًا بمعنى كامل ، ولكنها تعطي الحياة لنص اختبار مفيد لملء الفراغات التي يتم شغلها لاحقًا من نصوص مخصصة كتبها متخصصون في الاتصال . </p>
+<div class="social">
+    <a href=""> <i class="fa-brands fa-facebook-f"></i></a>
+   <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="">  <i class="fa-brands fa-twitter"></i></a>
+</div>
+    </div>
+
+    <div class="col-lg-3">
+<h5> أكثر المقالات قراءة </h5>
+<div>
+    <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> مراجعة نهائية للغة العربية </h6>
+    <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> مراجعة ليلة الإمتحان للغة الإنجليزية </h6>
+    <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> كيف تذاكر بذكاء </h6>
+    <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> ملخص النحو للثانوية العامة </h6>
+</div>
+    </div>
+
+    <div class="col-lg-3">
+        <h5> أكثر الكورسات تسجيلاً </h5>
+        <div>
+            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> أساسيات اللغة العربية </h6>
+            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> أدوبى فوتوشوب من البداية للنهاية </h6>
+            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> إدارة العملاء </h6>
+            <h6> <span class="ms-1"> <i class="fa-light fa-angles-left"></i> </span> إعلانات الفيس بوك الممولة </h6>
+        </div>
+            </div>
+
+    <div class="col-lg-2">
+        <h5> تواصل معنا </h5>
+        <div>
+            <h6> <span class="ms-1"> <i class="fa-solid fa-phone-flip"></i> </span> 01022886619 </h6>
+            <h6> <span class="ms-1"> <i class="fa-solid fa-envelope"></i> </span> Afedny.platform@gmail.com</h6>
+            <h6> <span class="ms-1"> <i class="fa-solid fa-location-dot"></i> </span> Cairo, Egypt</h6>
+        </div>
+    </div>
+
+</div>
+    </div>
+</div>
+<div class="footer2">
+    <div class="container d-flex align-items-center justify-content-between">
+    <h6> جميع الحقوق محفوظة <span> <img src="./assets/images/Vector.png" alt=""> </span> منصة أفدني 2023</h6>
+    <div class="d-flex align-items-center justify-content-between">
+            <a class="ms-5" href="#">سياسة الخصوصية</a>
+            <a class="" href="#">الشروط والأحكام</a>
+    </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+<script>
+    function setDirection(lang) {
+        const htmlElement = document.querySelector('html');
+        if (lang === 'ar') {
+            htmlElement.setAttribute('dir', 'rtl');
+        } else {
+            htmlElement.setAttribute('dir', 'ltr');
+        }
+    }
+</script>
